@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-3 mb-3" *ngFor="let caneca of canecas">
+            <div class="card shadow">
+                <img src="./assets/img/{{caneca.img}}" class="card-img-top" alt="capa da {{caneca.nome}}">
+                <div class="card-body">
+                    <h4><a href="caneca/{{caneca.id}}">{{caneca.nome}}</a></h4>
+                    <p>{{caneca.desc}}</p>
+                    <a href="caneca/{{caneca.id}}" class="btn btn-secondary btn-block">Comprar agora por R${{caneca.preco}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

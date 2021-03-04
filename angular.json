@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "caneca"
+    }
+  },
+  "defaultProject": "caneca",
+  "cli": {
+    "analytics": "81623d44-154b-4654-a427-74f7867746cd"
+  }
 }
