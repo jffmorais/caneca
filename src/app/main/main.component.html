@@ -1,14 +1,41 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4 mt-3 mb-3" *ngFor="let caneca of canecas">
-            <div class="card shadow">
-                <img src="./assets/img/{{caneca.img}}" class="card-img-top" alt="capa da {{caneca.nome}}">
-                <div class="card-body">
-                    <h4><a href="caneca/{{caneca.id}}">{{caneca.nome}}</a></h4>
-                    <p>{{caneca.desc}}</p>
-                    <a href="caneca/{{caneca.id}}" class="btn btn-secondary btn-block">Comprar agora por R${{caneca.preco}}</a>
+        <div class="col-md-2">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-4 mt-3 mb-3" *ngFor="let caneca of canecas">
+                    <div class="card shadow">
+                        <img src="./assets/img/{{caneca.img}}" class="card-img-top" alt="capa da {{caneca.nome}}">
+                        <div class="card-body">
+                            <a href="caneca/{{caneca.id}}">{{caneca.nome}}</a>
+                            <p>R${{caneca.preco}}</p>
+                            <a href="caneca/{{caneca.id}}" class="btn btn-primary btn-block">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><fa-icon [icon]="faArrowLeft"></fa-icon></a>
+                            </li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><fa-icon [icon]="faArrowRight"></fa-icon></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

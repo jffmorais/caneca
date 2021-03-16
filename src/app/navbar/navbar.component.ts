@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { faSearch, faSignInAlt, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  faSearch = faSearch;
+  faSignInAlt = faSignInAlt;
+  faShoppingCart = faShoppingCart;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -16,6 +22,14 @@ export class NavbarComponent implements OnInit {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+  }
+
+  btnCarrinho(){
+    this.router.navigateByUrl('/carrinho');
+  }
+
+  btnLogin(){
+    this.router.navigateByUrl('/login');
   }
 
 }

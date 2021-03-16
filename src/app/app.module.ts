@@ -11,6 +11,10 @@ import { RegistroComponent } from './registro/registro.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CanecaComponent } from './caneca/caneca.component';
 import { ContaComponent } from './conta/conta.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { ContaComponent } from './conta/conta.component';
     RegistroComponent,
     SobreComponent,
     CanecaComponent,
-    ContaComponent
+    ContaComponent,
+    CarrinhoComponent,
+    PageNotFoundComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

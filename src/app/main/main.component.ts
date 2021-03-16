@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Caneca } from '../model/caneca';
 import { CanecasService } from '../service/canecas.service';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main',
@@ -9,6 +10,8 @@ import { CanecasService } from '../service/canecas.service';
 })
 export class MainComponent implements OnInit {
 
+  faArrowLeft = faAngleLeft;
+  faArrowRight = faAngleRight;
   canecas: Array<Caneca> = [];
 
   constructor(private canecasServ: CanecasService) { }
