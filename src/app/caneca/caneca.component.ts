@@ -16,8 +16,9 @@ export class CanecaComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.caneca =  this.canecasServ.getCaneca(id);
-    console.log("caneca: ", this.caneca);
+    this.canecasServ.getCaneca(id).subscribe((data: Caneca)=>{
+      this.caneca = data;
+    });
   }
 
 }

@@ -17,7 +17,11 @@ export class MainComponent implements OnInit {
   constructor(private canecasServ: CanecasService) { }
 
   ngOnInit(): void {
-    this.canecas = this.canecasServ.getCanecas();
+    //this.canecas = this.canecasServ.getCanecas();
+    this.canecasServ.getCanecas().subscribe((data: Array<Caneca> = [])=>{
+      console.log(data);
+      this.canecas = data;
+    });
   }
 
 }

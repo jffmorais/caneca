@@ -9,6 +9,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { LoginComponent as AdminLoginComponent } from './admin/login/login.component';
 import { MainComponent as AdminMainComponent } from './admin/main/main.component';
+import { CanecaComponent as AdminCanecaComponent } from './admin/caneca/caneca.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'conta', component: ContaComponent },
   { path: 'admin/login', component: AdminLoginComponent },
   { path: 'admin/main', component: AdminMainComponent },
+  { path: 'admin/caneca', component: AdminCanecaComponent },
+  { path: 'admin/caneca/:id', component: AdminCanecaComponent },
   { path: 'admin', redirectTo:'/admin/login', pathMatch:'full' },
   { path: '', component: MainComponent },
   { path: '**', component: PageNotFoundComponent }

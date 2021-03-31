@@ -1,4 +1,4 @@
-export interface Caneca {
+export class Caneca {
     id: number;
     nome: string;
     desc: string;
@@ -6,4 +6,10 @@ export interface Caneca {
     dtCriacao: Date;
     qtd: number;
     preco: number;
+
+    constructor(){
+        this.img = "default.png";
+        this.qtd = 1;
+        this.preco = 0;
+    }
 }

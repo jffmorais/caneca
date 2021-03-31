@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,10 @@ import { ContaComponent } from './conta/conta.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoginComponent as AdminLoginComponent } from './admin/login/login.component';
+import { MainComponent as AdminMainComponent } from './admin/main/main.component';
+import { CanecaComponent as AdminCanecaComponent } from './admin/caneca/caneca.component';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -29,12 +36,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ContaComponent,
     CarrinhoComponent,
     PageNotFoundComponent,
-    SidebarComponent
+    SidebarComponent,
+    AdminLoginComponent,
+    AdminMainComponent,
+    AdminCanecaComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,50 @@
-<p>main works!</p>
+<div class="container">
+    <div class="row my-2">
+        <div class="col-md-11">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="O que você procura hoje?">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <fa-icon [icon]="faSearch"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-primary" (click)="novaCaneca()">
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOME</th>
+                <th scope="col">DESCRIÇÃO</th>
+                <th scope="col">QTD</th>
+                <th scope="col">PREÇO</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let caneca of canecas">
+                <th scope="row">{{caneca.id}}</th>
+                <td>{{caneca.nome}}</td>
+                <td>{{caneca.desc}}</td>
+                <td>{{caneca.qtd}}</td>
+                <td>{{caneca.preco}}</td>
+                <td>
+                    <div>
+                        <button class="btn btn-success mr-2" (click)="editaCaneca(caneca.id)">
+                            <fa-icon [icon]="faPen"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="apagaCaneca()">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
